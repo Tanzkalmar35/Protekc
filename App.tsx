@@ -20,7 +20,7 @@ export default function App() {
         <Stack.Screen
           name="Welcome"
           component={WelcomePage} />
-      </  Stack.Navigator>
+      </Stack.Navigator>
     </NavigationContainer>);
 }
 
