@@ -9,7 +9,7 @@
   </a>
 </p>
 
-> An mobile app to manage your passwords. Create and store your save passwords.
+> A mobile app to manage your passwords. Create and store your save passwords.
 
 ## Install
 
@@ -32,6 +32,3 @@ npm start
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
