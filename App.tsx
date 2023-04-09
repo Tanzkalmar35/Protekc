@@ -12,15 +12,15 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen
-          name="home"
+          name="Protekc"
           component={HomeScreen}
         />
         <Stack.Screen
           name="Welcome"
           component={WelcomePage} />
       </Stack.Navigator>
-    </NavigationContainer>);
+    </NavigationContainer >);
 }
 
