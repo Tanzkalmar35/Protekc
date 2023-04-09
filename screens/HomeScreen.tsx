@@ -1,6 +1,7 @@
-import { Button, Text, View } from "react-native";
+import { Button, Text, View, Image } from "react-native";
 import { styles } from "../styles/CommonStyles";
-import { SvgUri } from "react-native-svg-uri";
+
+// icons
 
 interface Props {
   navigation: any;
@@ -15,21 +16,21 @@ export default function HomeScreen({ navigation }: Props) {
         <View style={styles.category}>
           <View style={styles.vaultCategoryColor}></View>
           <Text style={styles.categoryTitle}>Favorites</Text>
-          {/* TODO: insert svg (greater than) */}
+          <Image style={styles.greaterThanSvg} source={require('../assets/icons/greaterthan-svgrepo-com.svg')} />
         </View>
       </View>
       <View style={styles.subSectionOthers}>
         <Text style={styles.sectionDescription}>Other features</Text>
         <View style={styles.subSection}>
           <View style={styles.category}>
-            {/* TODO: insert svg (logo) */}
+            <Image style={styles.staticCategorySvgIcon} source={require('../assets/icons/add-plus-circle-svgrepo-com.svg')} />
             <Text style={styles.categoryTitle}>Generate password</Text>
-            {/* TODO: insert svg (greater than) */}
+            <Image style={styles.greaterThanSvg} source={require('../assets/icons/greaterthan-svgrepo-com.svg')} />
           </View>
           <View style={styles.category}>
-            {/* TODO: insert svg (logo) */}
+            <Image style={styles.staticCategorySvgIcon} source={require('../assets/icons/settings-svgrepo-com.svg')} />
             <Text style={styles.categoryTitle}>Settings</Text>
-            {/* TODO: insert svg (greater than) */}
+            <Image style={styles.greaterThanSvg} source={require('../assets/icons/greaterthan-svgrepo-com.svg')} />
           </View>
         </View>
       </View>

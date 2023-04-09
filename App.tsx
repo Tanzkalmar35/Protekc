@@ -12,10 +12,15 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Navigator>
         <Stack.Screen
-          name="Protekc"
+          name="Home"
           component={HomeScreen}
+          options={{
+            title: 'Protekc Password Manager',
+            headerStyle: { backgroundColor: '#212121' },
+            headerTitleStyle: { color: 'white' },
+          }}
         />
         <Stack.Screen
           name="Welcome"
