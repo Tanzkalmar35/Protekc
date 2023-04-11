@@ -14,17 +14,22 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          name="Welcome"
+          component={WelcomePage}
+          options={{
+            headerShown: false,
+          }} />
+
+        <Stack.Screen
           name="Home"
           component={HomeScreen}
           options={{
+            headerShown: false,
             title: 'Protekc Password Manager',
             headerStyle: { backgroundColor: '#212121' },
             headerTitleStyle: { color: 'white' },
           }}
         />
-        <Stack.Screen
-          name="Welcome"
-          component={WelcomePage} />
       </Stack.Navigator>
     </NavigationContainer >);
 }

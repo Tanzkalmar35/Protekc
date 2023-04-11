@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   generalApp: {
     width: '100vw',
     height: '100vh',
-    backgroundColor: '#1a1a1a',
+    backgroundColor: '#1f2730',
   },
 
   // styles the general properties of the subsections
@@ -75,7 +75,7 @@ export const styles = StyleSheet.create({
   subSectionOthers: {
     width: '100vw',
     position: 'absolute',
-    bottom: '0',
+    bottom: '10vh',
   },
 
 });
