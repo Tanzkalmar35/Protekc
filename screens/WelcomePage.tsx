@@ -1,38 +1,50 @@
 import React from 'react'
-import { View, Text, Button, TextInput } from "react-native"
+import { View, Text, Button, Image } from "react-native"
 import { styles } from "../styles/CommonStyles";
 import { welcomeStyles } from '../styles/HomePageStyles';
-import { Kohana } from 'react-native-textinput-effects';
-import MaterialsIcon from "react-native-vector-icons/MaterialIcons";
+
+// login form
+import { Fumi } from 'react-native-textinput-effects';
+import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
+import Icon from "react-native-vector-icons/FontAwesome5";
 
 export default function WelcomePage() {
   return (
     <View style={styles.generalApp}>
       <View style={welcomeStyles.welcomePage}>
+        <Image
+          style={welcomeStyles.welcomeImage}
+          source={require('../assets/img/undraw_Security_re_a2rk-removebg-preview.png')}
+        />
         <Text style={welcomeStyles.welcomeTitle}>Welcome! </Text>
-        <Text style={welcomeStyles.welcomeSubTitle}>Please log in to your account</Text>
+        <Text style={welcomeStyles.welcomeSubTitle}>Please sign in to continue</Text>
         <View style={welcomeStyles.loginForm}>
-          <Kohana
-            style={{ backgroundColor: '#f9f5ed' }}
-            label={'Email'}
-            iconClass={MaterialsIcon}
-            iconName={'email'}
-            iconColor={'purple'}
-            labelStyle={{ color: 'purple' }}
-            labelContainerStyle={{ padding: 5 }}
-            useNativeDriver
+          <Fumi
+            label={'Email Address'}
+            iconClass={FontAwesomeIcon}
+            iconName={'envelope'}
+            iconColor={'#fff'}
+            inputPadding={16}
+            style={welcomeStyles.inputFields}
           />
-          <Kohana
-            style={{ backgroundColor: '#f9f5ed' }}
+          <Fumi
             label={'Password'}
-            iconClass={MaterialsIcon}
+            iconClass={Icon}
             iconName={'lock'}
-            iconColor={'purple'}
-            labelStyle={{ color: 'purple' }}
-            labelContainerStyle={{ padding: 5 }}
-            useNativeDriver
+            iconColor={'#fff'}
+            inputPadding={16}
+            style={welcomeStyles.inputFields}
           />
-          <Button></Button>
+          <Button
+            onPress={''}
+            title='Login'
+            color='#35b5ad'
+          />
+          <Text style={styles.textLink}>Forgot Password?</Text>
+          <View style={{ flexDirection: 'row' }}>
+            <Text style={styles.subDescriptionText}>Don't have an account yet?</Text>
+            <Text style={styles.textLink}> Sign up</Text>
+          </View>
         </View>
       </View>
     </View >

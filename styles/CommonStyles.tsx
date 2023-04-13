@@ -78,4 +78,14 @@ export const styles = StyleSheet.create({
     bottom: '10vh',
   },
 
+  subDescriptionText: {
+    color: '#645c64',
+    fontSize: '4vw'
+  },
+
+  textLink: {
+    color: '#35b5ad',
+    fontSize: '4vw'
+  },
+
 });

@@ -9,20 +9,30 @@ export const welcomeStyles = StyleSheet.create({
   },
 
   welcomeTitle: {
-    color: '#fff',
+    color: '#e6e1e4',
     fontFamily: 'sans-serif',
     fontSize: '3rem',
   },
 
   welcomeSubTitle: {
-    color: '#fff',
+    color: '#645c64',
     fontFamily: 'sans-serif',
     fontSize: '1.5rem',
   },
 
   loginForm: {
+  },
 
+  welcomeImage: {
+    width: '80vw',
+    height: '30vh',
+  },
+
+  inputFields: {
+    backgroundColor: '#212121',
+    borderRadius: '1.2rem'
   }
+
 })
 
 
