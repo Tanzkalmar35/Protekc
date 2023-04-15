@@ -23,12 +23,6 @@ export const welcomeStyles = StyleSheet.create({
     fontSize: '6vw',
   },
 
-  btnLogin: {
-    backgroundColor: '#fff',
-    color: '#000',
-    marginTop: '30vh',
-  },
-
   welcomeImage: {
     width: '80vw',
     height: '30vh',
