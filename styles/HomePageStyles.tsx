@@ -9,18 +9,24 @@ export const welcomeStyles = StyleSheet.create({
   },
 
   welcomeTitle: {
+    marginTop: '.5vh',
+    marginBottom: '5vh',
     color: '#e6e1e4',
     fontFamily: 'sans-serif',
-    fontSize: '3rem',
+    fontSize: '2.5rem',
   },
 
   welcomeSubTitle: {
+    marginBottom: '3vh',
     color: '#645c64',
     fontFamily: 'sans-serif',
-    fontSize: '1.5rem',
+    fontSize: '6vw',
   },
 
-  loginForm: {
+  btnLogin: {
+    backgroundColor: '#fff',
+    color: '#000',
+    marginTop: '30vh',
   },
 
   welcomeImage: {
@@ -29,8 +35,15 @@ export const welcomeStyles = StyleSheet.create({
   },
 
   inputFields: {
+    marginBottom: '2vh',
     backgroundColor: '#212121',
     borderRadius: '1.2rem'
+  },
+
+  signUpLink: {
+    marginTop: '5vh',
+    marginBottom: '2vh',
+    flexDirection: 'row'
   }
 
 })

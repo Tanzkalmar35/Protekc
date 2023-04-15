@@ -10,6 +10,8 @@ export const styles = StyleSheet.create({
   generalApp: {
     width: '100vw',
     height: '100vh',
+    maxWidth: '100vw',
+    maxHeight: '100vh',
     backgroundColor: '#1f2730',
   },
 
@@ -83,9 +85,15 @@ export const styles = StyleSheet.create({
     fontSize: '4vw'
   },
 
-  textLink: {
+  textLinkForgotPassword: {
+    marginTop: '3.5vh',
     color: '#35b5ad',
     fontSize: '4vw'
   },
+
+  textLinkSignUp: {
+    color: '#35b5ad',
+    fontSize: '4vw'
+  }
 
 });

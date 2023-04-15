@@ -36,14 +36,13 @@ export default function WelcomePage() {
             style={welcomeStyles.inputFields}
           />
           <Button
-            onPress={''}
-            title='Login'
-            color='#35b5ad'
+            title={'Login'}
+            color={'#35b5a6'}
           />
-          <Text style={styles.textLink}>Forgot Password?</Text>
-          <View style={{ flexDirection: 'row' }}>
+          <Text style={styles.textLinkForgotPassword}>Forgot Password?</Text>
+          <View style={welcomeStyles.signUpLink}>
             <Text style={styles.subDescriptionText}>Don't have an account yet?</Text>
-            <Text style={styles.textLink}> Sign up</Text>
+            <Text style={styles.textLinkSignUp}> Sign up</Text>
           </View>
         </View>
       </View>
