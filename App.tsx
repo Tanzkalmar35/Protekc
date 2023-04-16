@@ -25,9 +25,6 @@ export default function App() {
           component={HomeScreen}
           options={{
             headerShown: false,
-            title: 'Protekc Password Manager',
-            headerStyle: { backgroundColor: '#212121' },
-            headerTitleStyle: { color: 'white' },
           }}
         />
       </Stack.Navigator>

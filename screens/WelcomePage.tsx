@@ -1,5 +1,6 @@
-import React from 'react'
 import { View, Text, Button, Image } from "react-native"
+
+// styles
 import { styles } from "../styles/CommonStyles";
 import { welcomeStyles } from '../styles/HomePageStyles';
 
@@ -7,6 +8,9 @@ import { welcomeStyles } from '../styles/HomePageStyles';
 import { Fumi } from 'react-native-textinput-effects';
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import Icon from "react-native-vector-icons/FontAwesome5";
+
+// helper functions
+import { createUser } from '../database/Verification';
 
 export default function WelcomePage() {
   return (
@@ -36,8 +40,10 @@ export default function WelcomePage() {
             style={welcomeStyles.inputFields}
           />
           <Button
+            onPress={() => { createUser("Fabian") }}
             title={'Login'}
             color={'#35b5a6'}
+
           />
           <Text style={styles.textLinkForgotPassword}>Forgot Password?</Text>
           <View style={welcomeStyles.signUpLink}>
