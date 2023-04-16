@@ -94,6 +94,14 @@ export const styles = StyleSheet.create({
   textLinkSignUp: {
     color: '#35b5ad',
     fontSize: '4vw'
-  }
+  },
+
+  inputError: {
+    marginTop: '-1vh',
+    marginBottom: '1vh',
+    color: 'red',
+    fontSize: '4vw',
+    display: 'none'
+  },
 
 });

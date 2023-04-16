@@ -38,7 +38,8 @@ export const welcomeStyles = StyleSheet.create({
     marginTop: '5vh',
     marginBottom: '2vh',
     flexDirection: 'row'
-  }
+  },
+
 
 })
 

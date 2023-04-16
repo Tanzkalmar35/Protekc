@@ -10,9 +10,38 @@ import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 // helper functions
-import { createUser } from '../database/Verification';
+import { createUser, getAllUsers, userExisting } from '../database/Verification';
+import { useState } from "react";
 
 export default function WelcomePage() {
+
+  var [email, setEmail] = useState("");
+  var [password, setPassword] = useState("");
+
+  function clickLoginButton() {
+    inputCorrect(email) && inputCorrect(password) && userExisting(email) ? console.log('VALID INPUT')
+      : setInputError()
+    createUser(email, password);
+  }
+
+  function inputCorrect(input: string) {
+    return input === "" ? false : true;
+  }
+
+  function setInputError() {
+    const inputErrorText = document.getElementById('errorText');
+    // TODO: make the error text accessable and change the display attribute based on error or not
+    //inputErrorText === null ? "" : inputErrorText.style.removeProperty('display');
+  }
+
+  const handleEmailChange = (newEmail: string) => {
+    setEmail(newEmail);
+  }
+
+  const handlePasswordChange = (newPassword: string) => {
+    setPassword(newPassword);
+  }
+
   return (
     <View style={styles.generalApp}>
       <View style={welcomeStyles.welcomePage}>
@@ -22,7 +51,7 @@ export default function WelcomePage() {
         />
         <Text style={welcomeStyles.welcomeTitle}>Welcome! </Text>
         <Text style={welcomeStyles.welcomeSubTitle}>Please sign in to continue</Text>
-        <View style={welcomeStyles.loginForm}>
+        <View>
           <Fumi
             label={'Email Address'}
             iconClass={FontAwesomeIcon}
@@ -30,6 +59,7 @@ export default function WelcomePage() {
             iconColor={'#fff'}
             inputPadding={16}
             style={welcomeStyles.inputFields}
+            onChangeText={handleEmailChange}
           />
           <Fumi
             label={'Password'}
@@ -38,9 +68,11 @@ export default function WelcomePage() {
             iconColor={'#fff'}
             inputPadding={16}
             style={welcomeStyles.inputFields}
+            onChangeText={handlePasswordChange}
           />
+          <Text style={styles.inputError}>Email or password incorrect</Text>
           <Button
-            onPress={() => { createUser("Fabian") }}
+            onPress={clickLoginButton}
             title={'Login'}
             color={'#35b5a6'}
 
