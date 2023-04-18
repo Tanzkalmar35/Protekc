@@ -101,7 +101,6 @@ export const styles = StyleSheet.create({
     marginBottom: '1vh',
     color: 'red',
     fontSize: '4vw',
-    display: 'none'
   },
 
 });

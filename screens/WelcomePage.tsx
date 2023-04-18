@@ -10,18 +10,22 @@ import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 // helper functions
-import { createUser, getAllUsers, userExisting } from '../database/Verification';
+import { createUser, userExisting } from '../database/Verification';
 import { useState } from "react";
 
 export default function WelcomePage() {
 
   var [email, setEmail] = useState("");
   var [password, setPassword] = useState("");
+  var [errorText, setErrorText] = useState("");
 
   function clickLoginButton() {
-    inputCorrect(email) && inputCorrect(password) && userExisting(email) ? console.log('VALID INPUT')
+    inputCorrect(email) &&
+      inputCorrect(password) &&
+      userExisting(email) ?
+      console.log('VALID INPUT')
       : setInputError()
-    createUser(email, password);
+    userExisting(email);
   }
 
   function inputCorrect(input: string) {
@@ -29,9 +33,7 @@ export default function WelcomePage() {
   }
 
   function setInputError() {
-    const inputErrorText = document.getElementById('errorText');
-    // TODO: make the error text accessable and change the display attribute based on error or not
-    //inputErrorText === null ? "" : inputErrorText.style.removeProperty('display');
+    setErrorText("Email or password incorrect")
   }
 
   const handleEmailChange = (newEmail: string) => {
@@ -70,7 +72,7 @@ export default function WelcomePage() {
             style={welcomeStyles.inputFields}
             onChangeText={handlePasswordChange}
           />
-          <Text style={styles.inputError}>Email or password incorrect</Text>
+          <Text style={styles.inputError}>{errorText}</Text>
           <Button
             onPress={clickLoginButton}
             title={'Login'}
