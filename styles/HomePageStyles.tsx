@@ -1,44 +1,44 @@
 import React from 'react'
-import { StyleSheet } from "react-native";
+import {StyleSheet} from "react-native";
 
 
 export const welcomeStyles = StyleSheet.create({
 
-  welcomePage: {
-    margin: '2.5rem',
-  },
+    welcomePage: {
+        margin: '2.5rem',
+    },
 
-  welcomeTitle: {
-    marginTop: '.5vh',
-    marginBottom: '5vh',
-    color: '#e6e1e4',
-    fontFamily: 'sans-serif',
-    fontSize: '2.5rem',
-  },
+    welcomeTitle: {
+        color: '#e6e1e4',
+        fontFamily: 'sans-serif',
+        fontSize: '2.5rem',
+        marginBottom: '5vh',
+        marginTop: '.5vh',
+    },
 
-  welcomeSubTitle: {
-    marginBottom: '3vh',
-    color: '#645c64',
-    fontFamily: 'sans-serif',
-    fontSize: '6vw',
-  },
+    welcomeSubTitle: {
+        color: '#645c64',
+        fontFamily: 'sans-serif',
+        fontSize: '6vw',
+        marginBottom: '3vh',
+    },
 
-  welcomeImage: {
-    width: '80vw',
-    height: '30vh',
-  },
+    welcomeImage: {
+        height: '30vh',
+        width: '80vw',
+    },
 
-  inputFields: {
-    marginBottom: '2vh',
-    backgroundColor: '#212121',
-    borderRadius: '1.2rem'
-  },
+    inputFields: {
+        backgroundColor: '#212121',
+        borderRadius: '1.2rem',
+        marginBottom: '2vh'
+    },
 
-  signUpLink: {
-    marginTop: '5vh',
-    marginBottom: '2vh',
-    flexDirection: 'row'
-  },
+    signUpLink: {
+        flexDirection: 'row',
+        marginBottom: '2vh',
+        marginTop: '5vh'
+    },
 
 
 })

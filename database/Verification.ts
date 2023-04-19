@@ -2,33 +2,35 @@
 * This file contains all the funcitons 
 * that directly access the database
 */
-import { set, ref, get, getDatabase, child } from "firebase/database";
-import { database } from "./FirebaseConn";
+import {child, get, getDatabase, ref, set} from "firebase/database";
+import {database} from "./FirebaseConn";
 
 const dbRef = ref(getDatabase());
 
-export function createUser(email: String, password: String) {
-  set(ref(database, 'users/' + email), {
-    password: password,
-  });
+export function createUser(name: String, email: String, password: String): void {
+    set(ref(database, 'users/' + email), {
+        name: name,
+        password: password,
+    });
 }
 
-export function userExisting(email: string): Boolean {
-  return getAllUsers().some((user) => user.includes(email)) ? true : false;
+export async function userExisting(email: string): Promise<Boolean> {
+    return (await getAllUsers()).includes(email);
+
 }
 
-export function getAllUsers(): String[] {
-  let users: String[] = [];
+async function getAllUsers(): Promise<string[]> {
+    let users: string[] = [];
 
-  get(child(dbRef, 'users/')).then((snapshot) => {
-    if (snapshot.exists()) {
-      snapshot.forEach(function(data) {
-        data.key === null ? "" : users.push(data.key);
-      });
-    } else {
-      console.log('No users existing');
-    }
-  });
-
-  return users;
+    await get(child(dbRef, 'users/')).then((snapshot) => {
+        if (snapshot.exists()) {
+            snapshot.forEach(function (data): void {
+                data.key !== null ? users.push(data.key) : "";
+            });
+            return users;
+        } else {
+            console.log('No users existing');
+        }
+    });
+    return users;
 }
